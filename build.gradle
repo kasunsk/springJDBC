@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+version = '1.0'
+
+jar {
+    manifest {
+        attributes("SimpleProjInJdbc": "Gradle", "Implementation-Version": version)
+    }
+}
+
+repositories {
+		maven { url "http://repo.springsource.org/plugins-release" }
+		mavenCentral()
+}
+        
+dependencies {
+	compile	'org.springframework.build.gradle:propdeps-plugin:0.0.5',
+			'org.springframework:spring:2.5.6',
+			'org.slf4j:slf4j-api:1.7.5',
+			'org.slf4j:slf4j-log4j12:1.7.5',
+			'log4j:log4j:1.2.17',	
+			'org.springframework:spring-orm:3.2.4.RELEASE',
+			//'org.springframework.data:spring-data-couchbase:' + springDataCouchbaseVersion,
+			'org.springframework:spring-context:3.2.4.RELEASE',
+			//'org.springframework:spring-tx:' + springVersion,
+			//'org.hibernate:hibernate-entitymanager:4.1.9.Final',
+			//'commons-dbcp:commons-dbcp:' + commonsDbcpVersion,
+			//'org.hsqldb:hsqldb:2.2.9',
+			'javax.transaction:jta:1.1',
+			'mysql:mysql-connector-java:5.1.28'
+	
+
+testCompile	'junit:junit:4.11'
+
+}
