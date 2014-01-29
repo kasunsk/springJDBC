@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mkyong.common.App;
+//import com.mkyong.common.App;
 import com.mkyong.customer.dao.CustomerDAO;
 import com.mkyong.customer.model.Customer;
 
@@ -26,8 +26,11 @@ public class JdbcCustomerDAO implements CustomerDAO
 	
 	public void insert(Customer customer){
 		
-		String sql = "INSERT INTO CUSTOMER " +
-				"(CUST_ID, NAME, AGE) VALUES ("+2+",'saman',"+ 22+");";
+		String sql = "INSERT INTO customer " +
+				"(CUST_ID, NAME, AGE) VALUES (?, ?, ?)";
+		
+		log.info("sql: "+sql);
+		
 		Connection conn = null;
 		
 		try {
@@ -39,14 +42,16 @@ public class JdbcCustomerDAO implements CustomerDAO
 			PreparedStatement ps = conn.prepareStatement(sql);
 			log.info("prepareStatement(sql)");
 			
-		//	ps.setInt(1, customer.getCustId());
+			ps.setInt(1, customer.getCustId());
 			log.info("1 for customer");
-		//	ps.setString(2, customer.getName());
+			ps.setString(2, customer.getName());
 			log.info("2 for customer");
-		//	ps.setInt(3, customer.getAge());
+			ps.setInt(3, customer.getAge());
 			log.info("3 for customer");
 			
-			log.info(""+ ps);
+			
+			
+			log.info("object : "+ ps);
 			
 			ps.executeUpdate();
 			log.info("Data inserted");
@@ -73,7 +78,7 @@ public class JdbcCustomerDAO implements CustomerDAO
 		
 		log.info("Entered to findByCustomerId");
 		
-		String sql = "SELECT * FROM CUSTOMER WHERE CUST_ID = ?";
+		String sql = "SELECT * FROM customer WHERE CUST_ID = ?";
 		
 		log.info("sql is "+sql);
 		
