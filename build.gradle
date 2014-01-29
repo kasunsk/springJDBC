@@ -6,7 +6,7 @@ version = '1.0'
 
 jar {
     manifest {
-        attributes("SimpleProjInJdbc": "Gradle", "Implementation-Version": version)
+        attributes ("Implementation-Title": "gradle", "Implementation-Version": version)
     }
 }
 
