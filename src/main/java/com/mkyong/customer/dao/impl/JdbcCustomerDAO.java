@@ -44,13 +44,8 @@ public class JdbcCustomerDAO implements CustomerDAO
 			log.info("prepareStatement(sql)");
 			
 			ps.setInt(1, customer.getCustId());
-			log.info("1 for customer");
 			ps.setString(2, customer.getName());
-			log.info("2 for customer");
 			ps.setInt(3, customer.getAge());
-			log.info("3 for customer");
-			
-			
 			
 			log.info("object : "+ ps);
 			
