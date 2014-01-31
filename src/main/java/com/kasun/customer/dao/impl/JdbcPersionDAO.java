@@ -74,7 +74,7 @@ public class JdbcPersionDAO implements PersionDAO
 		}
 	}
 	
-	public Persion findByCustomerId(int custId){
+	public Persion findByPersionId(int custId){
 		
 		log.info("Entered to findByCustomerId");
 		
