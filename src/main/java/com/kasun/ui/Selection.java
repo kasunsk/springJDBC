@@ -1,4 +1,4 @@
-package com.mkyong.ui;
+package com.kasun.ui;
 
 public class Selection extends javax.swing.JFrame {
 

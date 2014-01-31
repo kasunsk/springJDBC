@@ -1,4 +1,4 @@
-package com.mkyong.ui;
+package com.kasun.ui;
 
 	public class Welcome extends javax.swing.JFrame {
 	    /**

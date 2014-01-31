@@ -1,11 +1,11 @@
-package com.mkyong.ui;
+package com.kasun.ui;
 
-import com.mkyong.customer.model.Persion;
+import com.kasun.customer.dao.PersionDAO;
+import com.kasun.customer.dao.impl.JdbcPersionDAO;
+import com.kasun.customer.model.Persion;
 
 //import DBConections.DBCon;
 
-import com.mkyong.customer.dao.PersionDAO;
-import com.mkyong.customer.dao.impl.JdbcPersionDAO;
 
 /**
 *

@@ -1,12 +1,10 @@
-package com.mkyong.common;
-
-
+package com.kasun.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.mkyong.customer.dao.PersionDAO;
-import com.mkyong.customer.model.Persion;
+import com.kasun.customer.dao.PersionDAO;
+import com.kasun.customer.model.Persion;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

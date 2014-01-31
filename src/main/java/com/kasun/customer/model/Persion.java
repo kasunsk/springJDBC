@@ -1,4 +1,4 @@
-package com.mkyong.customer.model;
+package com.kasun.customer.model;
 
 public class Persion {
     private String id;

@@ -1,4 +1,4 @@
-package com.mkyong.customer.dao.impl;
+package com.kasun.customer.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,8 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 //import com.mkyong.common.App;
-import com.mkyong.customer.dao.PersionDAO;
-import com.mkyong.customer.model.Persion;
+
+
+import com.kasun.customer.dao.PersionDAO;
+import com.kasun.customer.model.Persion;
 
 
 public class JdbcPersionDAO implements PersionDAO

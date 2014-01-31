@@ -1,6 +1,6 @@
-package com.mkyong.customer.dao;
+package com.kasun.customer.dao;
 
-import com.mkyong.customer.model.Persion;
+import com.kasun.customer.model.Persion;
 
 public interface PersionDAO 
 {
