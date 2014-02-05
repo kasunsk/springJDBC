@@ -99,10 +99,9 @@ package com.kasun.ui;
 	    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	        if (jTextField1.getText().equals("kasun") && jTextField2.getText().equals("password")){
 	            Selection select = new Selection();
-	            wlcme.setVisible(false);
 	            select.setVisible(true);
-	            wlcme.dispose();
-	            
+	            this.dispose();
+	           // wlcme.dispose();
 	        }else{
 	            jLabel4.setText("Error in User Name or Password");
 	        }
