@@ -84,7 +84,7 @@ public class Selection extends javax.swing.JFrame {
             if (jRadioButton1.isSelected()){
                 AddPersionData addpersiondata = new AddPersionData();
                 addpersiondata.setVisible(true);
-                selection.dispose();
+                this.dispose();
             } else if(jRadioButton2.isSelected()){
                 SerchPersion serchpersion = new SerchPersion();
                 serchpersion.setVisible(true);
