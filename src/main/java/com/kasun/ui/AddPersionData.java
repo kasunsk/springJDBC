@@ -107,43 +107,34 @@ public class AddPersionData extends javax.swing.JFrame {
       );
 
       pack();
-  }// </editor-fold>                        
+  }
+  
+  // </editor-fold>         
 
-  private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+
+  private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {  
+	  
       // TODO add your handling code here:
+	  
       Persion persion = new Persion();
       persion.setName(jTextField1.getText());
       persion.setId(jTextField2.getText());
       persion.setSex(jTextField3.getText());
       persion.setAddress(jTextField4.getText());
       persion.setTpnum(jTextField5.getText());
-             
+      
       ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
  	  
       PersionDAO persionDAO = (PersionDAO) context.getBean("persionDAO");
       
       persionDAO.insert(persion);
       System.out.println("inserted... :D");
-      
-     // DBCon db = new DBCon();
-//      try {
-//          db.addPersionToDatabase(persion);
-//          System.out.println("Done...!!!");
-//      } catch (SQLException ex) {
-//          //Logger.getLogger(AddPersionData.class.getName()).log(Level.SEVERE, null, ex);
-//          System.out.println("Error "+ex);
-//      }
   }                                        
 
   /**
    * @param args the command line arguments
    */
   public static void main(String args[]) {
-      /* Set the Nimbus look and feel */
-      //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-      /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-       * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-       */
       try {
           for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
               if ("Nimbus".equals(info.getName())) {

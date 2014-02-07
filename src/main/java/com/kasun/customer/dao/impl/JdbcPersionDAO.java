@@ -45,11 +45,17 @@ public class JdbcPersionDAO implements PersionDAO
 			PreparedStatement ps = conn.prepareStatement(sql);
 			log.info("prepareStatement(sql)");
 			
-			ps.setString(1, persion.getId());
-			ps.setString(2, persion.getName());
+			ps.setString(1, persion.getName());
+			ps.setString(2, persion.getId());
 			ps.setString(3, persion.getSex());
-			ps.setString(3, persion.getAddress());
-			ps.setString(3, persion.getTpnum());
+			ps.setString(4, persion.getAddress());
+			ps.setString(5, persion.getTpnum());
+			
+			log.info("Name "+persion.getName());
+			log.info("ID "+persion.getId());
+			log.info("sex "+persion.getSex());
+			log.info("address "+persion.getAddress());
+			log.info("Tp "+persion.getTpnum());
 			
 			log.info("object : "+ ps);
 			
