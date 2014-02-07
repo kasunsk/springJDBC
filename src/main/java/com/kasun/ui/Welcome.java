@@ -1,9 +1,7 @@
 package com.kasun.ui;
 
 	public class Welcome extends javax.swing.JFrame {
-	    /**
-		 * 
-		 */
+
 		private static final long serialVersionUID = 1L;
 
 		public Welcome() {
@@ -12,7 +10,7 @@ package com.kasun.ui;
 	    
 	   private static Welcome wlcme = new Welcome();
 
-	    @SuppressWarnings("unchecked")
+	  //  @SuppressWarnings("unchecked")
 	    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
 	    private void initComponents() {
 
