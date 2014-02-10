@@ -80,13 +80,11 @@ public class JdbcPersionDAO implements PersionDAO
 		}
 	}
 	
-	public Persion findByPersionId(int custId){
+	public Persion findByPersionId(String custId){
 		
 		log.info("Entered to findByCustomerId");
 		
 		String sql = "SELECT * FROM persion WHERE ID = ?";
-		
-		log.info("sql is "+sql);
 		
 		Connection conn = null;
 		
@@ -95,22 +93,40 @@ public class JdbcPersionDAO implements PersionDAO
 			log.info("Entered to findByCustomerId");
 			
 			conn = dataSource.getConnection();
+			log.info("Connected...");
+			
+			log.info("sql is "+sql);
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setInt(1, custId);
+			
+			log.info("ps is  "+ps);
+			
+			ps.setString(1, custId);
+			
 			Persion persion = null;
+			
 			ResultSet rs = ps.executeQuery();
+			
+			log.info("rs is  "+rs);
+			
 			if (rs.next()) {
+				
 				persion = new Persion(
 						rs.getString("ID"),
 						rs.getString("Name"),
 						rs.getString("Sex"),
 						rs.getString("Address"),
 						rs.getString("TPNum")
-						
 				);
 			}
 			rs.close();
 			ps.close();
+			
+			log.info("ID : "+persion.getId());
+			log.info("Name : "+persion.getName());
+			log.info("Sex : "+persion.getSex());
+			log.info("Address : "+persion.getAddress());
+			log.info("Tp Num : "+persion.getTpnum());
+			
 			return persion;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
