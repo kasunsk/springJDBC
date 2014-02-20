@@ -51,7 +51,7 @@ public class AddPersionData extends javax.swing.JFrame {
 
         jLabel4.setText("Address");
 
-        jLabel5.setText("TO NUm");
+        jLabel5.setText("TP NUm");
 
         jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
